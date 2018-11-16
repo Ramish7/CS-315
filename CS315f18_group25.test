@@ -1,0 +1,111 @@
+# this is a definition of a constant with ‘False’ as value
+define CONST2 False
+
+#this is a definition of a function 
+define FunctionTest1 ( arg1 , arg2 ) {
+
+#the following are assignment and operator statements
+result = arg1
+result += arg2
+result -= 2
+result *= 3
+result /= 2
+result %= 4
+
+return result }
+
+#the following are also assignment statements 
+varX = 5
+varY = 8.4
+
+#this is a call of the defined function 
+FunctionTest1 ( varX , 16)
+
+#the following is an if statement
+if ( varX < varY ) 
+   { out (varY “is greater than “ varX) }
+else { out (varX  “is greater than” varY)}
+
+if (varX==5) {out(varY “is equal to 5”)}
+if (varY!=5) {out(varY “is different from 5”)}
+
+#the following is a loop  statement
+varI=0
+loop ( varI>=0 && varI<=10  ) 
+{
+varI +=1
+out ("iteration n=" varI)
+ }
+
+
+#the following is a for_loop  statement: example1
+startLoop=1
+endLoop=10
+for varI in_range(startLoop:endLoop)
+{
+out ("iteration n=" varI)
+}
+
+#the following is a for_loop  statement: example2
+for varI in_range(1:10)
+{
+out ("iteration n=" varI)
+}
+
+#the following is a while_loop  statement
+varI=100
+while( varI>0   ) 
+{
+varI -=1
+out ("iteration n=" varI)
+ }
+
+# this is an example of using the Logic operators
+varAndLogic = CONST1 && CONST2
+varOrLogic = CONST1 |@ varAndLogic
+varNotLogic = ! varOrLogic
+
+### the following are an examples of using the primitive functions
+
+## move function
+steps = 6
+# the robot going to move (value_of_steps) = 6 mm (6 steps)
+move (steps) 
+# the robot going to move 9 mm (9 steps)
+move (9)
+
+## turn function
+degrees = 8
+# the robot going to turn (value_of_degrees) =  8
+turn (degrees) 
+# the robot going to move 12 degrees
+turn (12)
+
+## grab function
+objectName1 = 3
+grab ( objectName1 )
+
+## release function
+objectName2 = 8
+grab ( objectName2 )
+
+## read_sensor_data function
+sensorID=50
+read_sensor_data ( sensorID )
+read_sensor_data ( 100 )
+
+## receive_from_master and send _to_master functions
+masterID1 = 5189
+data1= 3.15
+receive_from_master ( data1 , masterID1 )
+receive_from_master ( right , 501)
+
+data2 =  right
+varID = 3078
+masterID2=varID
+receive_from_master ( data2 , masterID2 )
+send_to_master ( data2 , masterID2)
+
+receive_from_master ( data1, data2 , masterID2 )
+send_to_master ( data1 , left , masterID2)
+
