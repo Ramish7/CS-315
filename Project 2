@@ -1,0 +1,38 @@
+Parser for a Robot Programming Language
+The second project builds on your language design of the first project. 
+This project involves building a parser for your design using the yacc tool. 
+Please refer to the description of Project 1 for the requirements for your programming language design. 
+There are some minor changes, please carefully read the instructions below.
+
+Part A - Revised and Augmented Language Design (25 points)
+The requirements for the language are the same as Project 1 except for a few minor extensions. 
+You can use as much of your previous design work as you can. 
+However, if you have not already done so, you should incorporate the following elements into your design for this second project:
+main program statements (beginning of the execution)
+declarations (variables, constants etc.)
+assignment statement
+Selection statements
+Loop Statements
+Input and output statements
+function definition and function call statements
+Please note that we are not expecting a single correct answer. 
+This is a design problem. As long as your language is consistent, unambigous and it makes sense with respect to the specifications given above, it is fine.
+
+Part B - Implementing the Parser (65 points)
+For the second part of the project, you are required to implement a parser using the yacc tool. 
+The parser reads the source code of a program written in your programming language from the input file. 
+If the source code represents a valid program in your programming language, the parser should print out a message indicating the acceptance of the input (e.g. "Input program is valid"). 
+Otherwise, the parser should print out an error message indicating the line number of the source code that contains the error (e.g. "Syntax error on line **!" where ** will be the line number of the source program at which the error was detected).
+
+You should use the lexical analyzer that was developed in the first part of the project, but you may have to modify it (for example, to count line numbers). 
+Also, the lexical analyzer will return tokens, instead of printing messages.
+
+VERY IMPORTANT NOTE:
+
+Your yacc and lex files must compile in the dijkstra.cs.bilkent.edu.tr machine; otherwise, you will receive 0 from Part B.
+You should strive to eliminate ALL conflicts and ambiguities in your language, modifying your grammar if necessary. 
+You will need to provide unquestionably convincing arguments for any conflicts that are left in your final submission.
+
+Part C - Example Program (10 points)
+Finally, you will have to submit a test program written in your language that exercises all of the core features we required in the project. 
+You can reuse the test program from your first project, but note that you have to make sure to revise it according to the changes you made in your grammar.
